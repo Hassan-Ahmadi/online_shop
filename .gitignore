@@ -1,0 +1,44 @@
+# Python environment and virtual environment  
+venv/  
+.env  
+*.py[cod]  # Compiled Python files  
+
+# Django specific files  
+*.sqlite3  # SQLite database  
+db.sqlite3  
+__pycache__/  
+media/  
+staticfiles/  
+*.log  # Log files  
+*.pot  # Localization files  
+
+# VSCode specific files  
+.vscode/  
+.history/  # VSCode History (if you use the extension)  
+settings.json  
+
+# IDE specific files  
+.idea/  # JetBrains IDEs  
+*.sublime-project  
+*.sublime-workspace  
+
+# OS generated files  
+.DS_Store  # macOS  
+Thumbs.db  # Windows  
+*.bak  # Backup files  
+*.tmp  # Temporary files  
+
+# Coverage reports  
+.coverage  
+htmlcov/  
+.coverage.*  
+
+# Test settings  
+/tests/  
+*.test.py  
+*.test.   
+
+# Other files to ignore  
+*.py[cod]  # Compiled Python files  
+*.pid  
+*.seed
