@@ -7,8 +7,8 @@ venv/
 *.sqlite3  # SQLite database  
 db.sqlite3  
 __pycache__/  
-media/  
-staticfiles/  
+# media/  
+# staticfiles/  
 *.log  # Log files  
 *.pot  # Localization files  
 

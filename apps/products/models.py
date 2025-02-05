@@ -1,12 +1,11 @@
 import uuid
 from django.db import models
 from django.core.exceptions import ValidationError
-
+from online_shop.settings import PRODUCTS_MAX_IMAGE_SIZE
 
 def validate_image_size(image):
-    max_size = 2 * 1024 * 1024  # 2MB in bytes
     print(f"in validate image size, image.size: {image.size}")
-    if image.size > max_size:
+    if image.size > PRODUCTS_MAX_IMAGE_SIZE:
         raise ValidationError("Image size must be less than 2MB.")
 
 

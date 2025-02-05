@@ -133,17 +133,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
-# CONTENT_TYPES = ['image']
-# # 2.5MB - 2621440
-# # 5MB - 5242880
-# # 10MB - 10485760
-# # 20MB - 20971520
-# # 50MB - 5242880
-# # 100MB 104857600
-# # 250MB - 214958080
-# # 500MB - 429916160
-# MAX_UPLOAD_SIZE = 2621440
-
+# MAX 2MB for each product image
+PRODUCTS_MAX_IMAGE_SIZE = 2 * 1024 * 1024
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

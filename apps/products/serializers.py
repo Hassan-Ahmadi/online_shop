@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Product, ProductImage
-
+from online_shop.settings import PRODUCTS_MAX_IMAGE_SIZE
 
 class ProductImageSerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,7 +10,7 @@ class ProductImageSerializer(serializers.ModelSerializer):
             "image",
             "created_date",
             "updated_date",
-        ]  # Include fields you want to expose
+        ]
 
     def validate(self, attrs):
         # Get the product instance from the context
@@ -22,8 +22,7 @@ class ProductImageSerializer(serializers.ModelSerializer):
         return attrs
     
     def validate_image(self, value):
-        max_size = 2 * 1024 * 1024  # 2MB in bytes
-        if value.size > max_size:
+        if value.size > PRODUCTS_MAX_IMAGE_SIZE:
             raise serializers.ValidationError("Image size must be less than 2MB.")
         return value
 

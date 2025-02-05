@@ -4,7 +4,6 @@ from .views import ProductModelViewSet
 
 router = SimpleRouter()
 router.register('', ProductModelViewSet, basename='products')
-# router.register('a', ProductImageModelViewSet, basename='products-images')
 
 urlpatterns = [
     path('', include(router.urls))
